@@ -374,8 +374,8 @@
         <button class="btn btn-kuning mulai-btn" data-sfx onclick="openModal('modal-login')">▶ MULAI</button>
       </div>
       <div class="pengampu-pojok" data-sfx onclick="openModal('modal-dev')" title="Profil Pengembang">
-        <span class="pengampu-label">Pengampu Mata Pelajaran Sosiologi</span>
-        <span class="pengampu-nama" id="cfg-pengampu">Didin Samsul Maarif, S.Pd</span>
+        <span class="pengampu-label">Pengampu Mata Pelajaran Bahasa Inggris</span>
+        <span class="pengampu-nama" id="cfg-pengampu">I Made Merta, S.Pd</span>
       </div>
     </section>
     <section id="scr-menu" class="screen">
@@ -398,27 +398,17 @@
         <button class="menu-card mc-bermain" data-sfx onclick="startBermain()">
           <img src="./asset/img/menu_bermain.png" class="img-ikon" alt="Bermain" style="border-radius:50%; background:#fff; padding:10px;" onerror="imgErr(this)">
           <div class="mc-judul">Bermain</div>
-          <div class="mc-sub">45 Permainan Interaktif</div>
+          <div class="mc-sub">8 Permainan Interaktif</div>
         </button>
         <button class="menu-card mc-berlatih" data-sfx onclick="startBerlatih()">
           <img src="./asset/img/menu_berlatih.png" class="img-ikon" alt="Berlatih" style="border-radius:50%; background:#fff; padding:10px;" onerror="imgErr(this)">
           <div class="mc-judul">Berlatih</div>
-          <div class="mc-sub">45 Soal Evaluasi</div>
+          <div class="mc-sub">10 Soal Evaluasi</div>
         </button>
         <button class="menu-card mc-labmaya" data-sfx onclick="startLabMaya()">
           <img src="./asset/img/menu_labmaya.png" class="img-ikon" alt="Lab Maya" style="border-radius:50%; background:#fff; padding:10px;" onerror="imgErr(this)">
           <div class="mc-judul">Lab Maya</div>
-          <div class="mc-sub">Eksperimen Sosial Virtual</div>
-        </button>
-        <button class="menu-card mc-video" data-sfx onclick="startVideo()">
-          <img src="./asset/img/menu_video.png" class="img-ikon" alt="Video Interaktif" style="border-radius:50%; background:#fff; padding:10px;" onerror="imgErr(this)">
-          <div class="mc-judul">Video Interaktif</div>
-          <div class="mc-sub">4 Video Materi Sosiologi</div>
-        </button>
-        <button class="menu-card mc-wordwall" data-sfx onclick="startWordwall()">
-          <div class="emoji-ikon">🎮</div>
-          <div class="mc-judul">Game Wordwall</div>
-          <div class="mc-sub">Kuis Seru Kelompok Sosial</div>
+          <div class="mc-sub">Eksperimen Ungkapan Opini</div>
         </button>
         <button class="menu-card mc-sertifikat terkunci" id="mc-sertifikat" data-sfx onclick="bukaSertifikatGabungan()">
           <img src="./asset/img/menu_sertifikat.png" class="img-ikon" alt="Sertifikat" style="border-radius:50%; background:#fff; padding:10px;" onerror="imgErr(this)">
@@ -447,7 +437,7 @@
         <div class="judul-bar">Bermain<small id="bermain-sub">Aktivitas Interaktif</small></div>
         <div class="spacer"></div>
         <div class="skor-badge">🏆 Skor: <span id="skor-bermain-angka">0</span></div>
-        <div class="progress-wrap" style="margin-left:10px"><span class="progress-label" id="bermain-plabel">1/45</span><div class="progress-track" style="width:120px"><div class="progress-fill" id="bermain-pfill"></div></div></div>
+        <div class="progress-wrap" style="margin-left:10px"><span class="progress-label" id="bermain-plabel">1/8</span><div class="progress-track" style="width:120px"><div class="progress-fill" id="bermain-pfill"></div></div></div>
         <button class="icon-btn" data-sfx onclick="goMenu()" title="Menu">☰</button>
       </div>
       <div class="content" id="bermain-content"></div>
@@ -461,7 +451,7 @@
       <div class="topbar batik-motif">
         <div class="judul-bar">Berlatih<small id="berlatih-sub">Uji Pemahaman</small></div>
         <div class="spacer"></div>
-        <div class="progress-wrap"><span class="progress-label" id="berlatih-plabel">1/45</span><div class="progress-track" style="width:160px"><div class="progress-fill" id="berlatih-pfill"></div></div></div>
+        <div class="progress-wrap"><span class="progress-label" id="berlatih-plabel">1/8</span><div class="progress-track" style="width:160px"><div class="progress-fill" id="berlatih-pfill"></div></div></div>
         <button class="icon-btn" data-sfx onclick="goMenu()" title="Menu">☰</button>
       </div>
       <div class="content" id="berlatih-content"></div>
@@ -473,7 +463,7 @@
     <section id="scr-labmaya" class="screen">
       <div class="bg" style="background:linear-gradient(180deg,#F1FAEE,#EAFBF1);"></div>
       <div class="topbar batik-motif">
-        <div class="judul-bar">Lab Maya<small id="labmaya-sub">Eksperimen Sosial Virtual</small></div>
+        <div class="judul-bar">Lab Maya<small id="labmaya-sub">Eksperimen Ungkapan Opini</small></div>
         <div class="spacer"></div>
         <div class="progress-wrap"><span class="progress-label" id="labmaya-plabel">1/2</span><div class="progress-track"><div class="progress-fill" id="labmaya-pfill" style="background:linear-gradient(90deg,var(--hijau),var(--hijau-tua));"></div></div></div>
         <button class="icon-btn" data-sfx onclick="goMenu()" title="Menu">☰</button>
@@ -583,466 +573,100 @@
 
 /* --- 1) IDENTITAS MATERI & PROFIL --- */
 const CONFIG = {
-  judul:    "Kelompok Sosial",
-  subJudul: "Mengenal Jenis dan Tahapan Perkembangan Kelompok Sosial",
+  judul:    "Asking & Giving Opinion",
+  subJudul: "Expressing and Responding to Opinions in English",
   fase:     "Fase F • Kelas XI",
-  mapel:    "Sosiologi",
-  unit:     "Unit 2",
-  subUnit:  "Kelompok Sosial",
-  tp:       "Siswa memahami jenis-jenis kelompok sosial dan tahapan dalam kelompok sosial menurut Bruce Tuckman",
+  mapel:    "Bahasa Inggris",
+  unit:     "Unit 1",
+  subUnit:  "Asking and Giving Opinion",
+  tp:       "Siswa mampu menanyakan, menyatakan, serta menanggapi pendapat (setuju/tidak setuju) dengan ungkapan yang tepat dan santun, disertai alasan.",
   logo:     "./asset/img/logo.png",
-  bgJudul:  "./asset/img/bg_judul.jpg",
-  profil: {
-    nama:     "Didin Samsul Maarif, S.Pd",
-    instansi: "SMA N 2 Gerokgak",
-    jenis:    "Media Pembelajaran Interaktif (MPI)",
-    foto:     "./asset/img/profil.png"
-  }
+  bgJudul:  "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C1121F%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%231A1A1A%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E",
+  profil: { nama:"I Made Merta, S.Pd", instansi:"Guru Bahasa Inggris • Kelas XI", jenis:"Media Pembelajaran Interaktif (MPI)", foto:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C1121F%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23780000%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E" }
 };
 
-/* --- 2) BELAJAR — gambar kiri, penjelasan kanan (1 frame) --- */
-/* Tambah/kurangi item sesuai kebutuhan. Boleh pakai <b>, <ul><li>, dll. */
 const MATERI = [
-  { judul:"Belajar 1: Pengertian, Syarat, dan Tujuan Kelompok Sosial", img:"./asset/img/materi_1.png",
-    intro:"Manusia adalah makhluk sosial yang selalu ingin berkelompok. Yuk, kita pahami dulu apa itu kelompok sosial, syaratnya, dan untuk apa kelompok sosial itu dibentuk.",
-    isi:"<p><b>Pengertian Kelompok Sosial</b></p><p>Menurut Soerjono Soekanto, kelompok sosial adalah kumpulan manusia yang <b>nyata, teratur, dan tetap</b>, yang saling bekerja sama menjalankan perannya untuk mencapai tujuan yang sama.</p><p>Sederhananya, kelompok sosial adalah kumpulan dua orang atau lebih yang membentuk satu kesatuan dan saling berinteraksi — bukan sekadar kerumunan tanpa arah.</p><p><b>Syarat Terbentuknya Kelompok Sosial</b></p><ul><li>Setiap anggota <b>sadar</b> bahwa dirinya bagian dari kelompok.</li><li>Ada <b>hubungan timbal balik</b> antaranggota.</li><li>Ada <b>faktor/kepentingan bersama</b> yang mengikat anggotanya.</li><li>Memiliki <b>struktur, kaidah, dan pola perilaku</b>.</li><li><b>Bersistem dan berproses</b> dalam menjalankan kegiatan.</li><li>Kelangsungan kelompok bergantung pada <b>kesungguhan anggota</b> menjalankan perannya.</li><li>Memiliki <b>norma</b> yang mengatur perilaku anggota.</li></ul><p><b>Tujuan Kelompok Sosial</b></p><ul><li><b>Memenuhi kebutuhan sosial</b>: tempat berinteraksi dan merasa dihargai. 📌 <i>Contoh: teman sebaya untuk berbagi cerita dan dukungan.</i></li><li><b>Mencapai tujuan bersama</b> yang sulit dicapai sendirian. 📌 <i>Contoh: kelompok belajar untuk memahami pelajaran.</i></li><li><b>Memberi identitas diri</b> yang diakui masyarakat. 📌 <i>Contoh: menjadi anggota OSIS di sekolah.</i></li><li><b>Menanamkan nilai dan norma</b> perilaku yang sesuai harapan bersama. 📌 <i>Contoh: keluarga mengajarkan sopan santun sejak dini.</i></li><li><b>Menjaga keamanan dan ketertiban</b> lingkungan. 📌 <i>Contoh: RT, RW, atau satuan keamanan warga.</i></li><li><b>Meningkatkan solidaritas</b> antaranggota. 📌 <i>Contoh: kelompok relawan bencana yang saling mendukung.</i></li></ul>",
-    kuis:{ tanya:"Kelompok sosial dibentuk agar seseorang memperoleh identitas dan jati diri yang diakui masyarakat. Ini adalah tujuan untuk...", o:["Menjaga keamanan dan ketertiban","Memberi identitas diri"], j:1 } },
-  { judul:"Belajar 2: Faktor Pembentuk dan Ciri-Ciri Kelompok Sosial", img:"./asset/img/materi_4.png",
-    intro:"Kenapa sih kelompok sosial bisa terbentuk? Dan bagaimana cara membedakan kelompok yang benar-benar 'teratur' dengan yang cuma kumpul-kumpul sesaat? Yuk simak!",
-    isi:"<p><b>Faktor Pembentuk Kelompok Sosial</b></p><p>Ada 4 faktor kesamaan yang membuat kelompok sosial terbentuk:</p><ul><li><b>1. Kesamaan Genealogi</b>: karena ikatan darah/keturunan, untuk menyambung tali persaudaraan. 📌 <i>Contoh: keluarga besar, ikatan trah/marga.</i></li><li><b>2. Kesamaan Geografis</b>, dibagi 2: <b>wilayah tempat tinggal</b> (karena kedekatan tempat tinggal, contoh: Karang Taruna RT 05, arisan warga) dan <b>wilayah asal</b> (sesama perantau dari daerah yang sama, contoh: Persatuan Pelajar Indonesia di Australia).</li><li><b>3. Kesamaan Kepentingan</b>: orang dari suku/agama/daerah berbeda tapi punya kepentingan (hobi/pekerjaan) yang sama. 📌 <i>Contoh: Ikatan Dokter Indonesia, Komunitas Pencinta Anjing.</i></li><li><b>4. Kesamaan Keyakinan</b>: dibentuk untuk mempermudah aktivitas ibadah. 📌 <i>Contoh: Ikatan Remaja Islam, Ikatan Pemuda Kristiani.</i></li></ul><p><b>Ciri-Ciri Kelompok Sosial Teratur</b></p><ul><li>Ada <b>kesadaran</b> sebagai anggota kelompok yang sama.</li><li>Ada <b>hubungan timbal balik</b>, baik tatap muka maupun virtual.</li><li>Ada <b>struktur, norma, dan pola perilaku</b> yang jelas.</li></ul><p>📌 <i>Contoh: Komunitas Pejuang PTN rutin belajar bareng lewat grup chat, punya media sosial resmi, bahkan ada aturan — absen 3 kali berturut-turut, dikeluarkan dari grup.</i></p><p><b>Ciri-Ciri Kelompok Sosial Tidak Teratur</b></p><ul><li><b>Tidak ada pengorganisasian</b> — tidak ada ketua maupun anggota resmi.</li><li>Terbentuk karena <b>kepentingan sementara</b> dan hanya bertahan sebentar.</li></ul><p>📌 <i>Contoh: penonton konser dari berbagai daerah — sama-sama menonton, tapi tidak saling kenal dan tidak punya struktur.</i></p>",
-    kuis:{ tanya:"Kelompok sosial yang dibentuk untuk mempermudah aktivitas ibadah, seperti Ikatan Remaja Islam, terbentuk karena kesamaan...", o:["Genealogi","Keyakinan"], j:1 } },
-  { judul:"Belajar 3: Solidaritas Mekanik-Organik dan Paguyuban-Patembayan", img:"./asset/img/materi_5.png",
-    intro:"Para ahli sosiologi mengelompokkan kelompok sosial 'teratur' dari berbagai sudut pandang. Yuk kenalan dulu dengan dua tokoh: Emile Durkheim dan Ferdinand Tönnies.",
-    isi:"<p><b>1) Solidaritas Mekanik dan Solidaritas Organik</b> <i>(menurut Emile Durkheim)</i></p><ul><li><b>Solidaritas Mekanik</b>: anggotanya homogen (mirip satu sama lain), terikat kesadaran kolektif yang sama, norma berdasarkan adat istiadat dan sanksi sosial. 📌 <i>Contoh: masyarakat desa.</i></li><li><b>Solidaritas Organik</b>: anggotanya heterogen (beragam), terikat pembagian kerja yang spesifik dan saling membutuhkan sesuai keahlian, norma berupa hukum formal. 📌 <i>Contoh: masyarakat kota.</i></li></ul><p><b>2) Paguyuban (Gemeinschaft) dan Patembayan (Gesellschaft)</b> <i>(menurut Ferdinand Tönnies)</i></p><ul><li><b>Paguyuban</b>: hubungan bersifat intim, pribadi, dan jumlah anggota terbatas (eksklusif). Ada 3 jenis: <b>ikatan darah</b> (keluarga), <b>asal daerah</b> (contoh: Ikatan Mahasiswa Bekasi di UGM), dan <b>kesamaan pemikiran</b> (contoh: Komunitas Pejuang Kesetaraan Gender).</li><li><b>Patembayan</b>: bersifat kontraktual atau sementara, ada tujuan dan perjanjian yang mengikat kelompok. 📌 <i>Contoh: kelompok karyawan di suatu pabrik.</i></li></ul>",
-    kuis:{ tanya:"Kelompok sosial yang anggotanya homogen dan terikat oleh kesadaran kolektif yang sama, seperti pada masyarakat desa, disebut solidaritas...", o:["Organik","Mekanik"], j:1 } },
-  { judul:"Belajar 4: Primer-Sekunder dan In Group-Out Group", img:"./asset/img/materi_2.png",
-    intro:"Selanjutnya, ada dua cara lagi untuk mengenali kelompok sosial: dari segi keakraban antaranggota, dan dari segi rasa memiliki terhadap kelompok.",
-    isi:"<p><b>1) Kelompok Primer dan Sekunder</b></p><ul><li><b>Kelompok Primer</b> <i>(Charles Horton Cooley)</i>: saling mengenal, akrab, kerja sama erat, interaksi intens, dan hubungannya langgeng (disebut juga <i>face to face group</i>). 📌 <i>Contoh: keluarga dan persahabatan.</i></li><li><b>Kelompok Sekunder</b> <i>(Elsworth Faris)</i>: terbentuk karena ikatan formal/kelembagaan, tidak semua anggota saling kenal, interaksi tidak terlalu intens, dan hubungan didasarkan pada asas manfaat. 📌 <i>Contoh: sebuah PT dengan 1000 karyawan — sama-sama bekerja di tempat yang sama, tapi belum tentu akrab satu sama lain.</i></li></ul><p><b>2) Kelompok In Group dan Out Group</b> <i>(menurut William Graham Sumner)</i></p><ul><li><b>In Group</b>: punya perasaan saling memiliki yang kuat, rasa simpati tinggi, bahkan bisa menimbulkan fanatisme. 📌 <i>Contoh: suporter klub sepak bola yang fanatik.</i></li><li><b>Out Group</b>: mengarah pada persaingan, konflik, dan rasa antipati/tidak suka terhadap kelompok lain. 📌 <i>Contoh: suporter yang saling mengejek atau menjatuhkan klub lawan.</i></li></ul><p><b>Bonus: Kelompok Formal dan Informal</b></p><ul><li><b>Formal</b>: punya aturan tertulis dan struktur organisasi resmi. 📌 <i>Contoh: sekolah, partai politik.</i></li><li><b>Informal</b>: terbentuk spontan tanpa aturan tertulis. 📌 <i>Contoh: geng nongkrong sepulang sekolah, kelompok belajar bareng teman sebangku.</i></li></ul>",
-    kuis:{ tanya:"Rasa cinta berlebihan atau fanatisme terhadap kelompok sendiri, seperti pada suporter klub bola yang fanatik, merupakan ciri dari...", o:["Out Group","In Group"], j:1 } },
-  { judul:"Belajar 5: Membership Group dan Reference Group", img:"./asset/img/materi_6.png",
-    intro:"Robert King Merton punya cara unik untuk membedakan kelompok sosial, yaitu dari ada-tidaknya identitas fisik sebagai anggota.",
-    isi:"<p><b>Membership Group</b></p><ul><li>Anggotanya hadir secara fisik/offline dan tergabung secara resmi.</li><li>Setiap anggota punya kartu identitas atau atribut yang menjadi simbol kelompok.</li></ul><p>📌 <i>Contoh: OSIS, ekstrakurikuler, Karang Taruna.</i></p><p><b>Reference Group</b></p><ul><li>Tidak bergabung menjadi anggota resmi.</li><li>Menjadikan kelompok lain sebagai <b>acuan</b> untuk bertindak atau bersikap.</li></ul><p>📌 <i>Contoh: simpatisan partai politik yang mendukung dan bertindak sesuai arahan partai, tanpa menjadi anggota resmi.</i></p>",
-    kuis:{ tanya:"Seseorang yang mendukung dan bertindak sesuai arahan sebuah partai politik tanpa menjadi anggota resmi partai tersebut adalah contoh...", o:["Membership Group","Reference Group"], j:1 } },
-  { judul:"Belajar 6: Kelompok Sosial Tidak Teratur — Kerumunan", img:"./asset/img/materi_7.png",
-    intro:"Selain kelompok teratur, ada juga kelompok sosial 'tidak teratur' — salah satunya kerumunan. Yuk kenali jenis-jenisnya menurut Kingsley Davis!",
-    isi:"<p><b>Kerumunan</b> adalah individu yang berkumpul secara kebetulan, bersifat spontan, sementara, dan tidak teratur. Kingsley Davis membaginya menjadi 3 kelompok besar:</p><p><b>1) Kerumunan Biasa (Casual Crowds)</b></p><ul><li><b>Kerumunan Kurang Menyenangkan</b>: kumpulan orang dengan tujuan sama tapi saling menghalangi. 📌 <i>Contoh: antrean kasir atau KRL yang penuh sesak.</i></li><li><b>Kerumunan Panik</b>: orang-orang sibuk menyelamatkan diri, suasana tegang. 📌 <i>Contoh: orang berhamburan saat gempa atau kebakaran.</i></li><li><b>Kerumunan Penonton</b>: tidak direncanakan, muncul karena menonton kejadian tertentu. 📌 <i>Contoh: orang-orang berkumpul melihat kecelakaan.</i></li></ul><p><b>2) Kerumunan Berartikulasi Struktur Sosial (Social Structured Crowds)</b></p><ul><li><b>Audiens Formal</b>: punya pusat perhatian dan tujuan yang sama, tapi komunikasi bersifat satu arah/pasif. 📌 <i>Contoh: pendengar ceramah.</i></li><li><b>Kelompok Ekspresif Direncanakan</b>: tujuannya sama, tapi pusat perhatian tiap orang bisa berbeda. 📌 <i>Contoh: di pesta pernikahan, ada yang mengobrol, ada yang berfoto, ada juga yang ke stan makanan.</i></li></ul><p><b>3) Kerumunan Berlawanan Norma Sosial (Lawless Crowds)</b></p><ul><li><b>Kerumunan Emosional</b>: terbentuk karena alasan emosional, memakai kekuatan fisik/kekerasan. 📌 <i>Contoh: tawuran antarpelajar.</i></li><li><b>Kerumunan Amoral</b>: perilakunya bertentangan dengan moral, tapi tidak memakai kekerasan fisik. 📌 <i>Contoh: kelompok pengguna narkoba atau penjudi.</i></li></ul>",
-    kuis:{ tanya:"Kumpulan orang yang berhamburan menyelamatkan diri saat terjadi gempa bumi termasuk contoh kerumunan...", o:["Panik (Panic Crowds)","Penonton (Spectator Crowds)"], j:0 } },
-  { judul:"Belajar 7: Kelompok Sosial Tidak Teratur — Massa dan Publik", img:"./asset/img/materi_8.png",
-    intro:"Dua jenis kelompok sosial tidak teratur lainnya adalah Massa dan Publik. Meski mirip, keduanya punya perbedaan penting, lho!",
-    isi:"<p><b>Massa</b> adalah kumpulan orang dengan tujuan tertentu yang berkumpul di suatu tempat dalam waktu sementara. Ciri-cirinya:</p><ul><li>Anggotanya <b>heterogen</b> (latar belakang beragam).</li><li><b>Impulsif dan responsif</b> — bergerak cepat dan tiba-tiba menghadapi situasi.</li><li>Ada pihak yang <b>menggerakkan/memimpin</b>.</li><li>Ada <b>tujuan bersama</b>, serta waktu dan tempat yang direncanakan.</li></ul><p>📌 <i>Contoh: aksi mahasiswa menolak kenaikan BBM, demonstrasi buruh menolak PHK sepihak.</i></p><p><b>Publik</b> adalah kelompok yang tidak berbentuk kesatuan dan berinteraksi secara tidak langsung lewat media komunikasi. Ciri-cirinya:</p><ul><li><b>Interaksi tidak langsung</b> — tidak bertemu secara fisik.</li><li>Punya <b>ketertarikan pada isu yang sama</b>.</li><li>Punya <b>tujuan</b> tertentu.</li></ul><p>📌 <i>Contoh: netizen di media sosial yang ramai membahas Pemilu, atau warganet yang menyuarakan tagar #DiRumahAja saat pandemi COVID-19.</i></p>",
-    kuis:{ tanya:"Warganet yang membahas suatu isu di media sosial tanpa bertemu langsung secara fisik merupakan contoh...", o:["Massa","Publik"], j:1 } },
-  { judul:"Belajar 8: Dinamika dan Pola Hubungan Antarkelompok Sosial", img:"./asset/img/materi_9.png",
-    intro:"Kelompok sosial tidak selalu tetap begitu saja — ia bisa berubah dari waktu ke waktu, bahkan saling berhubungan dengan kelompok lain. Yuk pelajari dinamika dan pola hubungannya!",
-    isi:"<p><b>Dinamika Kelompok Sosial</b> adalah perubahan atau pergerakan yang terjadi dalam sebuah kelompok. Penyebabnya bisa dari dalam kelompok itu sendiri (<b>internal</b>) seperti konflik antaranggota, perbedaan tujuan, atau pergantian pemimpin — maupun dari luar (<b>eksternal</b>) seperti perubahan sosial, ekonomi, politik, atau perkembangan teknologi.</p><p>📌 <i>Contoh: kelompok belajarmu jadi lebih sering berdiskusi lewat grup WhatsApp setelah mengenal teknologi baru — ini termasuk faktor eksternal.</i></p><p><b>Pola Hubungan Antarkelompok</b> adalah cara dua kelompok atau lebih saling berinteraksi, misalnya:</p><ul><li><b>Akulturasi</b>: bercampurnya budaya tanpa kehilangan ciri aslinya.</li><li><b>Dominasi</b>: satu kelompok menguasai kelompok lain.</li><li><b>Paternalisme</b>: kelompok yang lebih kuat membimbing/melindungi kelompok lain.</li><li><b>Integrasi</b>: dua kelompok atau lebih melebur menjadi satu.</li><li><b>Pluralisme</b>: kelompok-kelompok hidup berdampingan meski berbeda.</li></ul>",
-    kuis:{ tanya:"Perubahan pada kelompok belajar akibat mulai digunakannya grup WhatsApp untuk berdiskusi termasuk dinamika kelompok karena faktor...", o:["Internal","Eksternal"], j:1 } },
-  { judul:"Belajar 9: Tahapan Perkembangan Kelompok Sosial Menurut Bruce Tuckman", img:"./asset/img/materi_3.png",
-    intro:"Bruce Tuckman (1965) merumuskan teori tahapan perkembangan kelompok yang kemudian disempurnakan bersama Mary Ann Jensen pada 1977 dengan tambahan tahap Adjourning.",
-    isi:"<p>Lima tahap perkembangan kelompok menurut Tuckman:</p><ul><li><b>1. Forming (Pembentukan)</b>: anggota baru berkumpul, saling mengenal, merasa canggung, serta mencari norma dasar dan tujuan kelompok. 📌 <i>Contoh: siswa baru dibagi jadi kelompok diskusi, masih saling berkenalan dan menanyakan siapa yang jadi ketua.</i></li><li><b>2. Storming (Timbulnya Konflik)</b>: muncul gesekan, perbedaan pendapat, perebutan peran, dan resistensi terhadap aturan. 📌 <i>Contoh: dalam kelompok belajar, ada yang ingin fokus teori, ada yang ingin latihan soal, sehingga terjadi perdebatan.</i></li><li><b>3. Norming (Pembentukan Norma)</b>: konflik mereda, kesepakatan dan norma kelompok terbentuk, muncul rasa kebersamaan (cohesiveness). 📌 <i>Contoh: kelompok diskusi akhirnya sepakat membuat jadwal dan membagi tugas (pencatat, penyaji, moderator).</i></li><li><b>4. Performing (Kinerja Optimal)</b>: kelompok berfungsi efisien, produktif, dan fokus pada pencapaian tujuan bersama. 📌 <i>Contoh: kelompok berhasil menyelesaikan makalah tepat waktu dengan kerja sama yang solid.</i></li><li><b>5. Adjourning (Pembubaran)</b>: tugas telah selesai, tujuan tercapai, dan kelompok membubarkan diri atau berpisah. 📌 <i>Contoh: setelah presentasi selesai, kelompok belajar bubar, namun tiap siswa mendapat pengalaman kerja sama.</i></li></ul><p>⚡ <b>Singkatnya:</b> Forming = kenalan → Storming = konflik → Norming = aturan → Performing = produktif → Adjourning = selesai/bubar.</p><p><b>Agar kelompok tidak sampai bubar (Adjourning)</b>, dapat dilakukan:</p><ul><li>Merumuskan visi dan target baru secara berkala.</li><li>Regenerasi anggota dan penyegaran kepemimpinan.</li><li>Membangun komunikasi transparan dan resolusi konflik.</li><li>Menjaga <i>sense of belonging</i> (rasa memiliki) antaranggota.</li><li>Berinovasi dan beradaptasi dengan perkembangan zaman.</li></ul>",
-    kuis:{ tanya:"Tahap dalam teori Tuckman ketika kelompok mulai mengalami gesekan, perbedaan pendapat, dan perebutan peran disebut...", o:["Forming","Storming"], j:1 } }
+  { judul:"Belajar 1: What Is an Opinion? Asking for Opinion", img:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C1121F%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23780000%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%E2%9D%93%3C/text%3E%3C/svg%3E",
+    intro:"An opinion is what you think or feel about something. It is not a fact, so other people may think differently. Let's learn how to ASK for someone's opinion.",
+    isi:"<p><b>Fact vs Opinion</b></p><ul><li><b>Fact</b>: can be proven. <i>Bali is an island in Indonesia.</i></li><li><b>Opinion</b>: personal view. <i>Bali is the most beautiful island.</i></li></ul><p><b>Expressions of Asking for Opinion</b></p><ul><li>What do you think about ...?</li><li>What is your opinion on ...?</li><li>How do you feel about ...?</li><li>Do you think (that) ...?</li><li>In your view, ...?</li><li>Would you say that ...?</li></ul><p>📌 <i>Example: What do you think about learning English through songs?</i></p>",
+    kuis:{ tanya:"Which expression is used to ASK for an opinion?", o:["What do you think about this plan?","I think this plan is great."], j:0 } },
+  { judul:"Belajar 2: Giving Opinion", img:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231A1A1A%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23C1121F%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%F0%9F%92%A1%3C/text%3E%3C/svg%3E",
+    intro:"After being asked, we can give our opinion. We can sound certain, neutral, or not so sure.",
+    isi:"<p><b>Strong opinion</b></p><ul><li>I strongly believe that ...</li><li>I am convinced that ...</li><li>Without a doubt, ...</li></ul><p><b>Neutral opinion</b></p><ul><li>I think ... / I believe ...</li><li>In my opinion, ...</li><li>From my point of view, ...</li></ul><p><b>Tentative (less sure) opinion</b></p><ul><li>I guess ... / I suppose ...</li><li>It seems to me that ...</li><li>Perhaps ... / Maybe ...</li></ul><p>📌 <i>Example: In my opinion, school should start later because students need enough sleep.</i></p>",
+    kuis:{ tanya:"Which sentence shows a TENTATIVE (less sure) opinion?", o:["I am absolutely convinced it is essential.","I suppose it might be helpful."], j:1 } },
+  { judul:"Belajar 3: Agreeing and Disagreeing", img:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C1121F%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23780000%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%F0%9F%A4%9D%3C/text%3E%3C/svg%3E",
+    intro:"When someone gives an opinion, we respond. We can agree, partly agree, or disagree. Always stay polite!",
+    isi:"<p><b>Agreeing</b></p><ul><li>I agree with you. / You are absolutely right.</li><li>I could not agree more. / Exactly!</li><li>That is a good point.</li></ul><p><b>Partly agreeing</b></p><ul><li>You have a point, but ...</li><li>I see what you mean, but ...</li></ul><p><b>Disagreeing</b></p><ul><li>I do not agree. / I do not think so.</li><li>I am afraid I disagree.</li><li>I see it differently.</li></ul><p>💡 <b>Tip:</b> To disagree politely, say <i>I see what you mean, but ...</i> and give a reason.</p>",
+    kuis:{ tanya:"Which is the most POLITE way to disagree?", o:["That is nonsense!","I see what you mean, but I disagree."], j:1 } },
+  { judul:"Belajar 4: Giving Reasons and Sample Dialogue", img:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27640%27%20height%3D%27480%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231A1A1A%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23C1121F%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-size%3D%27200%27%20text-anchor%3D%27middle%27%3E%F0%9F%97%A3%EF%B8%8F%3C/text%3E%3C/svg%3E",
+    intro:"A good opinion always has a reason. Use connectors such as because, since, for example, and therefore.",
+    isi:"<p><b>Useful connectors</b></p><ul><li><b>because / since</b>: gives a reason</li><li><b>for example / for instance</b>: gives an example</li><li><b>therefore / as a result</b>: gives a result</li><li><b>however / but</b>: shows contrast</li></ul><p><b>Sample dialogue</b></p><p><b>Dewi:</b> What do you think about bringing phones to school?<br><b>Komang:</b> In my opinion, it is useful because we can search information quickly.<br><b>Dewi:</b> I see what you mean, but some students play games in class.<br><b>Komang:</b> You have a point. Therefore, we need clear rules.<br><b>Dewi:</b> I agree with you.</p>",
+    kuis:{ tanya:"I like reading ___ it gives me new ideas. Choose the best word.", o:["because","although"], j:0 } }
 ];
 
-/* --- 3) BERMAIN — 45 permainan, 5 ragam interaktivitas --- */
-/* Tipe: 'jodoh' | 'klik' | 'urut' | 'kumpul' | 'sambung' (lihat PANDUAN). */
 const dataBermain = [
-  // (1) JODOH — Pengertian & Syarat
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan syarat kelompok sosial dengan penjelasannya!',
-    pairs:[{n:1,teks:'Kesadaran Bersama'},{n:2,teks:'Interaksi Timbal Balik'},{n:3,teks:'Faktor Pengikat'}],
-    imgs:[{n:1,i:'./asset/img/jodoh11_1.png',name:'Sadar sebagai Bagian Kelompok'},{n:2,i:'./asset/img/jodoh11_2.png',name:'Komunikasi Dua Arah Antaranggota'},{n:3,i:'./asset/img/jodoh11_3.png',name:'Kesamaan Tujuan atau Nasib'}] },
-  // (2) KLIK — Pengertian & Syarat
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan KELOMPOK SOSIAL, bukan kerumunan!',
-    opsi:[
-      {imgPath:'./asset/img/klik11_1.png', t:'Warga desa rutin bertemu dan sadar sebagai satu kesatuan', b:true,  msg:'Benar. Ada kesadaran bersama dan interaksi berkelanjutan.'},
-      {imgPath:'./asset/img/klik11_2.png', t:'Penonton konser yang baru bertemu sekali', b:false, msg:'Bukan ini, tidak ada kesadaran maupun interaksi berkelanjutan.'},
-      {imgPath:'./asset/img/klik11_3.png', t:'Orang menunggu bus tanpa saling kenal', b:false, msg:'Bukan ini, ini hanya kerumunan sementara.'},
-      {imgPath:'./asset/img/klik11_4.png', t:'Pengunjung pasar yang lewat begitu saja', b:false, msg:'Bukan ini, tidak ada ikatan maupun kesadaran bersama.'}
-    ] },
-  // (3) URUT — Pengertian & Syarat
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan proses terbentuknya kelompok sosial dari sekadar berkumpul menjadi kelompok yang solid!',
-    urut:['Individu-individu berkumpul di suatu tempat','Terjadi interaksi antarindividu','Muncul kesadaran sebagai satu kesatuan','Terbentuk struktur dan norma bersama'] },
-  // (4) KUMPUL — Pengertian & Syarat
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan CONTOH KELOMPOK SOSIAL sesuai syaratnya! Hindari yang bukan.',
-    benar:'./asset/img/kumpul11_benar.png',
-    salah:['./asset/img/kumpul11_salah1.png','./asset/img/kumpul11_salah2.png'] },
-  // (5) SAMBUNG — Pengertian & Syarat
-  { t:'sambung', sub:'Sambung Syarat Kelompok Sosial', ins:'Pilih lanjutan yang benar!',
-    hasil:'Kelompok sosial terbentuk karena adanya kesadaran bersama, interaksi timbal balik, faktor pengikat, serta struktur dan norma yang dipatuhi bersama.',
+  { t:'urut', sub:'Susun Dialog', ins:'Arrange the dialogue in the correct order!',
+    urut:["A: What do you think about learning English through songs?","B: I think it is a great idea.","A: Why do you say so?","B: Because we can learn new words and pronunciation naturally."] },
+  { t:'sambung', sub:'Asking for Opinion', ins:'Pilih kata yang tepat!',
+    hasil:'We ask for opinion with: What do you think about ...? How do you feel about ...? What is your opinion on ...?',
     steps:[
-      { prev:'Rasa memiliki dan sadar menjadi bagian dari suatu kelompok disebut...', benar:'Kesadaran Bersama', salah:['Interaksi Timbal Balik','Faktor Pengikat'] },
-      { prev:'Adanya komunikasi dua arah antaranggota kelompok disebut syarat...', benar:'Interaksi Timbal Balik', salah:['Kesadaran Bersama','Struktur dan Norma'] },
-      { prev:'Kesamaan nasib, hobi, tujuan, atau wilayah yang mengikat anggota disebut...', benar:'Faktor Pengikat', salah:['Interaksi Timbal Balik','Kesadaran Bersama'] }
-    ] },
-  // (6) JODOH — Ciri & Dasar Pembentukan
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan dasar pembentukan kelompok sosial dengan contohnya!',
-    pairs:[{n:1,teks:'Genealogi/Keturunan'},{n:2,teks:'Kesamaan Wilayah'},{n:3,teks:'Kesamaan Kepentingan'}],
-    imgs:[{n:1,i:'./asset/img/jodoh12_1.png',name:'Trah Keluarga Besar'},{n:2,i:'./asset/img/jodoh12_2.png',name:'Ikatan Mahasiswa Daerah'},{n:3,i:'./asset/img/jodoh12_3.png',name:'Klub Olahraga'}] },
-  // (7) KLIK — Ciri & Dasar Pembentukan
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar kelompok yang terbentuk atas dasar KESAMAAN NASIB!',
-    opsi:[
-      {imgPath:'./asset/img/klik12_1.png', t:'Asosiasi mantan pekerja pabrik yang di-PHK', b:true,  msg:'Benar. Kesamaan nasib/pengalaman menjadi dasar pembentukannya.'},
-      {imgPath:'./asset/img/klik12_2.png', t:'Trah keluarga besar', b:false, msg:'Bukan ini, ini dasar genealogi/keturunan.'},
-      {imgPath:'./asset/img/klik12_3.png', t:'Ikatan warga satu RT', b:false, msg:'Bukan ini, ini dasar kesamaan wilayah.'},
-      {imgPath:'./asset/img/klik12_4.png', t:'Klub pecinta fotografi', b:false, msg:'Bukan ini, ini dasar kesamaan kepentingan.'}
-    ] },
-  // (8) URUT — Ciri & Dasar Pembentukan
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan langkah menganalisis dasar pembentukan sebuah kelompok sosial!',
-    urut:['Amati asal-usul keanggotaan kelompok','Periksa kesamaan wilayah tempat tinggal anggota','Analisis kesamaan minat atau kepentingan anggota','Simpulkan dasar pembentukan kelompok tersebut'] },
-  // (9) KUMPUL — Ciri & Dasar Pembentukan
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan CIRI KELOMPOK SOSIAL (berstruktur & bernorma)! Hindari yang salah.',
-    benar:'./asset/img/kumpul12_benar.png',
-    salah:['./asset/img/kumpul12_salah1.png','./asset/img/kumpul12_salah2.png'] },
-  // (10) SAMBUNG — Ciri & Dasar Pembentukan
-  { t:'sambung', sub:'Sambung Ciri Kelompok Sosial', ins:'Pilih lanjutan yang benar!',
-    hasil:'Kelompok sosial dicirikan sebagai kesatuan nyata yang berstruktur, bernorma, dan menunjukkan ikatan sosial antaranggotanya.',
+      { prev:'___ do you think about the new school canteen?', benar:'What', salah:['Who','Where'] },
+      { prev:'How do you ___ about homework?', benar:'feel', salah:['feeling','felt'] },
+      { prev:'What is your ___ on social media?', benar:'opinion', salah:['opinions','opine'] } ] },
+  { t:'urut', sub:'Susun Dialog', ins:'Arrange the conversation in the correct order!',
+    urut:["Rina: How do you feel about wearing a school uniform?","Doni: In my opinion, it makes everyone equal.","Rina: I see what you mean, but it can be uncomfortable.","Doni: You have a point. Maybe the material should be more comfortable."] },
+  { t:'sambung', sub:'Giving Opinion', ins:'Pilih kata yang tepat!',
+    hasil:'We give opinion with: In my opinion, ... I strongly believe that ... From my point of view, ...',
     steps:[
-      { prev:'Kelompok sosial merupakan kesatuan yang dapat dibedakan dari kelompok lain, ini disebut ciri...', benar:'Kesatuan Nyata', salah:['Struktur Peran','Ikatan Sosial'] },
-      { prev:'Kelompok memiliki aturan main dan pola perilaku bersama, ini disebut ciri...', benar:'Struktur & Norma', salah:['Kesatuan Nyata','Ikatan Sosial'] },
-      { prev:'Antaranggota kelompok menunjukkan hubungan emosional dan kedekatan, ini disebut ciri...', benar:'Ikatan Sosial', salah:['Struktur & Norma','Kesatuan Nyata'] }
-    ] },
-  // (11) JODOH — Primer vs Sekunder
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan Kelompok Primer/Sekunder dengan contohnya!',
-    pairs:[{n:1,teks:'Kelompok Primer'},{n:2,teks:'Kelompok Sekunder'}],
-    imgs:[{n:1,i:'./asset/img/jodoh13_1.png',name:'Sahabat Dekat'},{n:2,i:'./asset/img/jodoh13_2.png',name:'Ikatan Profesi'}] },
-  // (12) KLIK — Primer vs Sekunder
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan KELOMPOK SEKUNDER!',
-    opsi:[
-      {imgPath:'./asset/img/klik13_1.png', t:'Serikat pekerja formal', b:true,  msg:'Benar. Bersifat formal, impersonal, dan sesuai tujuan tertentu.'},
-      {imgPath:'./asset/img/klik13_2.png', t:'Keluarga inti', b:false, msg:'Bukan ini, ini contoh kelompok primer.'},
-      {imgPath:'./asset/img/klik13_3.png', t:'Sahabat sejak kecil', b:false, msg:'Bukan ini, ini contoh kelompok primer.'},
-      {imgPath:'./asset/img/klik13_4.png', t:'Kelompok arisan tetangga yang akrab', b:false, msg:'Bukan ini, hubungan yang akrab termasuk ciri primer.'}
-    ] },
-  // (13) URUT — Primer vs Sekunder
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan sifat interaksi dari yang paling personal (primer) ke paling formal (sekunder)!',
-    urut:['Tatap muka intens dan akrab','Komunikasi mulai terbatas pada tugas','Hubungan bersifat formal dan spesifik','Interaksi sepenuhnya berbasis kontrak kerja'] },
-  // (14) KUMPUL — Primer vs Sekunder
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan CONTOH KELOMPOK PRIMER! Hindari yang bukan.',
-    benar:'./asset/img/kumpul13_benar.png',
-    salah:['./asset/img/kumpul13_salah1.png','./asset/img/kumpul13_salah2.png'] },
-  // (15) SAMBUNG — Primer vs Sekunder
-  { t:'sambung', sub:'Sambung Primer & Sekunder', ins:'Pilih lanjutan yang benar!',
-    hasil:'Charles H. Cooley membedakan kelompok sosial menjadi kelompok primer yang akrab dan personal, serta kelompok sekunder yang formal dan impersonal.',
+      { prev:'In my ___, students need more sports activities.', benar:'opinion', salah:['opinions','think'] },
+      { prev:'I strongly ___ that reading is a good habit.', benar:'believe', salah:['believing','belief'] },
+      { prev:'From my point of ___, online classes are flexible.', benar:'view', salah:['see','look'] } ] },
+  { t:'urut', sub:'Kekuatan Opini', ins:'Order the opinions from the LEAST sure to the MOST sure!',
+    urut:["I guess it might help.","I think it is helpful.","I strongly believe it is helpful.","I am absolutely convinced it is essential."] },
+  { t:'sambung', sub:'Agreeing & Disagreeing', ins:'Pilih kata yang tepat!',
+    hasil:'Agree: You are absolutely right. Disagree: I am afraid I disagree. Partly agree: You have a point, but ...',
     steps:[
-      { prev:'Tokoh yang mengemukakan pembagian kelompok primer dan sekunder adalah...', benar:'Charles H. Cooley', salah:['W.G. Sumner','Ferdinand Tönnies'] },
-      { prev:'Kelompok dengan ikatan batin kuat dan tatap muka langsung disebut kelompok...', benar:'Primer', salah:['Sekunder','Formal'] },
-      { prev:'Kelompok yang bersifat formal, impersonal, dan spesifik sesuai tugas disebut kelompok...', benar:'Sekunder', salah:['Primer','Informal'] }
-    ] },
-  // (16) JODOH — In-group vs Out-group
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan In-Group/Out-Group dengan contohnya!',
-    pairs:[{n:1,teks:'In-Group'},{n:2,teks:'Out-Group'}],
-    imgs:[{n:1,i:'./asset/img/jodoh14_1.png',name:'Klub yang Diikuti Sendiri'},{n:2,i:'./asset/img/jodoh14_2.png',name:'Kelompok Pesaing'}] },
-  // (17) KLIK — In-group vs Out-group
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan OUT-GROUP!',
-    opsi:[
-      {imgPath:'./asset/img/klik14_1.png', t:'Kelompok pesaing bisnis', b:true,  msg:'Benar. Out-group adalah kelompok luar yang dianggap asing atau saingan.'},
-      {imgPath:'./asset/img/klik14_2.png', t:'Tim sekolah sendiri', b:false, msg:'Bukan ini, ini contoh in-group.'},
-      {imgPath:'./asset/img/klik14_3.png', t:'Keluarga besar sendiri', b:false, msg:'Bukan ini, ini contoh in-group.'},
-      {imgPath:'./asset/img/klik14_4.png', t:'Sahabat dekat sendiri', b:false, msg:'Bukan ini, ini contoh in-group.'}
-    ] },
-  // (18) URUT — In-group vs Out-group
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan proses munculnya sikap in-group dan out-group menurut Sumner!',
-    urut:['Individu bergabung ke suatu kelompok','Muncul rasa memiliki dan loyalitas terhadap kelompoknya','Kelompok lain dipandang berbeda atau asing','Muncul sikap membanggakan kelompok sendiri terhadap out-group'] },
-  // (19) KUMPUL — In-group vs Out-group
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan IN-GROUP! Hindari out-group.',
-    benar:'./asset/img/kumpul14_benar.png',
-    salah:['./asset/img/kumpul14_salah1.png','./asset/img/kumpul14_salah2.png'] },
-  // (20) SAMBUNG — In-group vs Out-group
-  { t:'sambung', sub:'Sambung In-Group & Out-Group', ins:'Pilih lanjutan yang benar!',
-    hasil:'W.G. Sumner membedakan in-group sebagai kelompok kita yang penuh loyalitas, dan out-group sebagai kelompok mereka yang dianggap asing atau saingan.',
+      { prev:'You are ___ right. I think so too.', benar:'absolutely', salah:['hardly','never'] },
+      { prev:'I am afraid I ___ with you.', benar:'disagree', salah:['agree','agreeing'] },
+      { prev:'You have a point, ___ I see it differently.', benar:'but', salah:['so','because'] } ] },
+  { t:'urut', sub:'Susun Paragraf', ins:'Arrange the steps of writing an opinion paragraph!',
+    urut:["State your opinion clearly","Give a reason using because","Add an example","Restate your opinion"] },
+  { t:'sambung', sub:'Reasons & Connectors', ins:'Pilih kata yang tepat!',
+    hasil:'Because gives a reason, therefore gives a result, and for example gives an example.',
     steps:[
-      { prev:'Tokoh yang mengemukakan konsep in-group dan out-group adalah...', benar:'W.G. Sumner', salah:['Charles H. Cooley','Bruce Tuckman'] },
-      { prev:'Kelompok tempat seseorang mengidentifikasikan dirinya disebut...', benar:'In-Group', salah:['Out-Group','Kelompok Sekunder'] },
-      { prev:'Kelompok luar yang dianggap asing atau lawan disebut...', benar:'Out-Group', salah:['In-Group','Kelompok Primer'] }
-    ] },
-  // (21) JODOH — Gemeinschaft vs Gesellschaft
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan tipe Gemeinschaft dengan contohnya!',
-    pairs:[{n:1,teks:'By Blood'},{n:2,teks:'By Place'},{n:3,teks:'By Mind'}],
-    imgs:[{n:1,i:'./asset/img/jodoh15_1.png',name:'Sekerabat/Keluarga'},{n:2,i:'./asset/img/jodoh15_2.png',name:'Tetangga Sekampung'},{n:3,i:'./asset/img/jodoh15_3.png',name:'Komunitas Seideologi'}] },
-  // (22) KLIK — Gemeinschaft vs Gesellschaft
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan GESELLSCHAFT (Patembayan)!',
-    opsi:[
-      {imgPath:'./asset/img/klik15_1.png', t:'Kontrak kerja di perusahaan', b:true,  msg:'Benar. Gesellschaft berbasis ikatan ekonomi/kontrak yang sementara.'},
-      {imgPath:'./asset/img/klik15_2.png', t:'Warga satu desa', b:false, msg:'Bukan ini, ini contoh Gemeinschaft by place.'},
-      {imgPath:'./asset/img/klik15_3.png', t:'Keluarga besar', b:false, msg:'Bukan ini, ini contoh Gemeinschaft by blood.'},
-      {imgPath:'./asset/img/klik15_4.png', t:'Komunitas seagama', b:false, msg:'Bukan ini, ini contoh Gemeinschaft by mind.'}
-    ] },
-  // (23) URUT — Gemeinschaft vs Gesellschaft
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan dari ciri Gemeinschaft menuju ciri Gesellschaft!',
-    urut:['Ikatan darah dalam keluarga (by blood)','Ikatan tempat tinggal bertetangga (by place)','Ikatan gagasan atau ideologi bersama (by mind)','Ikatan ekonomi berbasis kontrak (Gesellschaft)'] },
-  // (24) KUMPUL — Gemeinschaft vs Gesellschaft
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan GEMEINSCHAFT (Paguyuban)! Hindari Gesellschaft.',
-    benar:'./asset/img/kumpul15_benar.png',
-    salah:['./asset/img/kumpul15_salah1.png','./asset/img/kumpul15_salah2.png'] },
-  // (25) SAMBUNG — Gemeinschaft vs Gesellschaft
-  { t:'sambung', sub:'Sambung Gemeinschaft & Gesellschaft', ins:'Pilih lanjutan yang benar!',
-    hasil:'Ferdinand Tönnies membedakan Gemeinschaft (paguyuban) yang alami dan kekal, dengan Gesellschaft (patembayan) yang bersifat kontraktual dan sementara.',
-    steps:[
-      { prev:'Tokoh yang mengemukakan konsep Gemeinschaft dan Gesellschaft adalah...', benar:'Ferdinand Tönnies', salah:['Bruce Tuckman','W.G. Sumner'] },
-      { prev:'Kelompok dengan ikatan batin murni, alami, dan kekal disebut...', benar:'Gemeinschaft', salah:['Gesellschaft','Kelompok Sekunder'] },
-      { prev:'Kelompok dengan ikatan lahiriah, sementara, dan berbasis kontrak disebut...', benar:'Gesellschaft', salah:['Gemeinschaft','Kelompok Primer'] }
-    ] },
-  // (26) JODOH — Formal vs Informal
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan kelompok Formal/Informal dengan contohnya!',
-    pairs:[{n:1,teks:'Kelompok Formal'},{n:2,teks:'Kelompok Informal'}],
-    imgs:[{n:1,i:'./asset/img/jodoh16_1.png',name:'Instansi Pemerintah'},{n:2,i:'./asset/img/jodoh16_2.png',name:'Geng Nongkrong'}] },
-  // (27) KLIK — Formal vs Informal
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan kelompok INFORMAL!',
-    opsi:[
-      {imgPath:'./asset/img/klik16_1.png', t:'Kelompok belajar teman sekelas', b:true,  msg:'Benar. Terbentuk spontan tanpa aturan tertulis yang kaku.'},
-      {imgPath:'./asset/img/klik16_2.png', t:'Sekolah', b:false, msg:'Bukan ini, ini contoh kelompok formal.'},
-      {imgPath:'./asset/img/klik16_3.png', t:'Partai politik', b:false, msg:'Bukan ini, ini contoh kelompok formal.'},
-      {imgPath:'./asset/img/klik16_4.png', t:'Instansi pemerintah', b:false, msg:'Bukan ini, ini contoh kelompok formal.'}
-    ] },
-  // (28) URUT — Formal vs Informal
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan proses terbentuknya kelompok formal!',
-    urut:['Dibentuk dengan tujuan resmi','Disusun struktur hierarki organisasi','Ditetapkan aturan tertulis','Beroperasi sesuai aturan formal'] },
-  // (29) KUMPUL — Formal vs Informal
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan kelompok FORMAL! Hindari yang informal.',
-    benar:'./asset/img/kumpul16_benar.png',
-    salah:['./asset/img/kumpul16_salah1.png','./asset/img/kumpul16_salah2.png'] },
-  // (30) SAMBUNG — Formal vs Informal
-  { t:'sambung', sub:'Sambung Formal & Informal', ins:'Pilih lanjutan yang benar!',
-    hasil:'Kelompok formal memiliki aturan tertulis dan struktur resmi, sedangkan kelompok informal terbentuk spontan tanpa aturan tertulis yang kaku.',
-    steps:[
-      { prev:'Kelompok yang memiliki aturan tertulis tegas dan struktur hierarki resmi disebut kelompok...', benar:'Formal', salah:['Informal','Sekunder'] },
-      { prev:'Kelompok yang terbentuk spontan tanpa aturan tertulis yang kaku disebut kelompok...', benar:'Informal', salah:['Formal','Primer'] },
-      { prev:'OSIS dan partai politik merupakan contoh kelompok...', benar:'Formal', salah:['Informal','Gemeinschaft'] }
-    ] },
-  // (31) JODOH — Dinamika & Pola Hubungan Antarkelompok
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan pola hubungan antarkelompok dengan pengertiannya!',
-    pairs:[{n:1,teks:'Dominasi'},{n:2,teks:'Integrasi'},{n:3,teks:'Pluralisme'}],
-    imgs:[{n:1,i:'./asset/img/jodoh17_1.png',name:'Penguasaan Kelompok Lain'},{n:2,i:'./asset/img/jodoh17_2.png',name:'Penyatuan Hak Sipil & Politik'},{n:3,i:'./asset/img/jodoh17_3.png',name:'Penghormatan Hak Tiap Kelompok'}] },
-  // (32) KLIK — Dinamika & Pola Hubungan Antarkelompok
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan PATERNALISME!',
-    opsi:[
-      {imgPath:'./asset/img/klik17_1.png', t:'Dominasi kelompok pendatang terhadap kelompok pribumi', b:true,  msg:'Benar. Paternalisme adalah dominasi kelompok pendatang atas pribumi.'},
-      {imgPath:'./asset/img/klik17_2.png', t:'Pengakuan hak semua kelompok secara sejajar', b:false, msg:'Bukan ini, ini contoh pluralisme.'},
-      {imgPath:'./asset/img/klik17_3.png', t:'Penyatuan hak sipil semua warga', b:false, msg:'Bukan ini, ini contoh integrasi.'},
-      {imgPath:'./asset/img/klik17_4.png', t:'Percampuran budaya tanpa hilang budaya asli', b:false, msg:'Bukan ini, ini contoh akulturasi.'}
-    ] },
-  // (33) URUT — Dinamika & Pola Hubungan Antarkelompok
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan contoh faktor penyebab dinamika kelompok dari faktor INTERNAL ke faktor EKSTERNAL!',
-    urut:['Konflik antaranggota kelompok','Pergantian kepemimpinan kelompok','Perubahan kondisi ekonomi masyarakat','Perkembangan teknologi di luar kelompok'] },
-  // (34) KUMPUL — Dinamika & Pola Hubungan Antarkelompok
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan pola hubungan INTEGRASI! Hindari yang lain.',
-    benar:'./asset/img/kumpul17_benar.png',
-    salah:['./asset/img/kumpul17_salah1.png','./asset/img/kumpul17_salah2.png'] },
-  // (35) SAMBUNG — Dinamika & Pola Hubungan Antarkelompok
-  { t:'sambung', sub:'Sambung Pola Hubungan Antarkelompok', ins:'Pilih lanjutan yang benar!',
-    hasil:'Pola hubungan antarkelompok meliputi akulturasi, dominasi, paternalisme, integrasi, dan pluralisme, tergantung bagaimana kelompok saling berinteraksi.',
-    steps:[
-      { prev:'Percampuran dua kebudayaan tanpa menghilangkan kebudayaan asli disebut...', benar:'Akulturasi', salah:['Dominasi','Integrasi'] },
-      { prev:'Penguasaan suatu kelompok atas kelompok lain, misalnya penjajahan, disebut...', benar:'Dominasi', salah:['Pluralisme','Akulturasi'] },
-      { prev:'Pengakuan dan penghormatan atas hak tiap kelompok secara sejajar disebut...', benar:'Pluralisme', salah:['Dominasi','Paternalisme'] }
-    ] },
-  // (36) JODOH — Tahapan Tuckman
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan tahapan Tuckman dengan cirinya!',
-    pairs:[{n:1,teks:'Forming'},{n:2,teks:'Norming'},{n:3,teks:'Performing'}],
-    imgs:[{n:1,i:'./asset/img/jodoh18_1.png',name:'Anggota Saling Berkenalan'},{n:2,i:'./asset/img/jodoh18_2.png',name:'Norma Kelompok Terbentuk'},{n:3,i:'./asset/img/jodoh18_3.png',name:'Kelompok Bekerja Efektif'}] },
-  // (37) KLIK — Tahapan Tuckman
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan tahap STORMING!',
-    opsi:[
-      {imgPath:'./asset/img/klik18_1.png', t:'Muncul gesekan dan perbedaan pendapat antaranggota', b:true,  msg:'Benar. Storming adalah tahap timbulnya konflik dalam kelompok.'},
-      {imgPath:'./asset/img/klik18_2.png', t:'Anggota baru saling berkenalan', b:false, msg:'Bukan ini, ini contoh tahap Forming.'},
-      {imgPath:'./asset/img/klik18_3.png', t:'Kelompok bekerja efisien dan produktif', b:false, msg:'Bukan ini, ini contoh tahap Performing.'},
-      {imgPath:'./asset/img/klik18_4.png', t:'Kelompok menyelesaikan tugas dan berpisah', b:false, msg:'Bukan ini, ini contoh tahap Adjourning.'}
-    ] },
-  // (38) URUT — Tahapan Tuckman
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan tahapan perkembangan kelompok menurut Bruce Tuckman!',
-    urut:['Anggota baru saling mengenal dan merasa canggung','Muncul konflik dan perebutan peran','Norma dan kesepakatan kelompok terbentuk','Kelompok bekerja efisien dan produktif','Kelompok membubarkan diri setelah tujuan tercapai'] },
-  // (39) KUMPUL — Tahapan Tuckman
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan ciri tahap PERFORMING! Hindari yang salah.',
-    benar:'./asset/img/kumpul18_benar.png',
-    salah:['./asset/img/kumpul18_salah1.png','./asset/img/kumpul18_salah2.png'] },
-  // (40) SAMBUNG — Tahapan Tuckman
-  { t:'sambung', sub:'Sambung Tokoh & Tahapan Tuckman', ins:'Pilih lanjutan yang benar!',
-    hasil:'Bruce Tuckman mengemukakan teori tahapan kelompok pada tahun 1965, dan tahap Adjourning ditambahkan bersama Mary Ann Jensen pada tahun 1977.',
-    steps:[
-      { prev:'Tokoh pencetus teori tahapan perkembangan kelompok (1965) adalah...', benar:'Bruce Tuckman', salah:['Mary Ann Jensen','W.G. Sumner'] },
-      { prev:'Tahap Adjourning ditambahkan oleh Tuckman bersama tokoh...', benar:'Mary Ann Jensen', salah:['Charles H. Cooley','Ferdinand Tönnies'] },
-      { prev:'Tahap akhir ketika kelompok membubarkan diri setelah tujuan tercapai disebut...', benar:'Adjourning', salah:['Forming','Norming'] }
-    ] },
-  // (41) JODOH — Tips Keberlanjutan & Genealogi
-  { t:'jodoh', sub:'Menjodohkan', ins:'Jodohkan tips menjaga keberlanjutan kelompok dengan penjelasannya!',
-    pairs:[{n:1,teks:'Regenerasi Anggota'},{n:2,teks:'Visi & Target Baru'},{n:3,teks:'Sense of Belonging'}],
-    imgs:[{n:1,i:'./asset/img/jodoh19_1.png',name:'Rekrutmen & Rotasi Kepengurusan'},{n:2,i:'./asset/img/jodoh19_2.png',name:'Merumuskan Tujuan Baru Berkala'},{n:3,i:'./asset/img/jodoh19_3.png',name:'Apresiasi & Kebersamaan Anggota'}] },
-  // (42) KLIK — Tips Keberlanjutan & Genealogi
-  { t:'klik', sub:'Memilih Gambar', ins:'Pilih gambar yang menunjukkan upaya REGENERASI ANGGOTA!',
-    opsi:[
-      {imgPath:'./asset/img/klik19_1.png', t:'Merekrut anggota baru dan merotasi kepengurusan', b:true,  msg:'Benar. Regenerasi membawa energi dan ide-ide segar ke kelompok.'},
-      {imgPath:'./asset/img/klik19_2.png', t:'Membiarkan konflik tanpa penyelesaian', b:false, msg:'Bukan ini, ini justru dapat membuat kelompok bubar.'},
-      {imgPath:'./asset/img/klik19_3.png', t:'Menutup diri dari perkembangan zaman', b:false, msg:'Bukan ini, kelompok justru perlu berinovasi dan beradaptasi.'},
-      {imgPath:'./asset/img/klik19_4.png', t:'Membiarkan kepengurusan yang sama selamanya', b:false, msg:'Bukan ini, kepengurusan yang tidak berganti dapat membuat kelompok stagnan.'}
-    ] },
-  // (43) URUT — Tips Keberlanjutan & Genealogi
-  { t:'urut', sub:'Mengurutkan', ins:'Urutkan langkah menjaga keberlanjutan kelompok agar tidak sampai bubar!',
-    urut:['Merumuskan visi dan target baru secara berkala','Melakukan regenerasi anggota dan kepemimpinan','Membangun komunikasi transparan','Menjaga sense of belonging anggota','Melakukan inovasi dan adaptasi'] },
-  // (44) KUMPUL — Tips Keberlanjutan & Genealogi
-  { t:'kumpul', sub:'Kumpulkan yang Benar', ins:'Ketuk hanya gambar yang menunjukkan CONTOH KELOMPOK BERDASARKAN GENEALOGI (keturunan)! Hindari yang lain.',
-    benar:'./asset/img/kumpul19_benar.png',
-    salah:['./asset/img/kumpul19_salah1.png','./asset/img/kumpul19_salah2.png'] },
-  // (45) SAMBUNG — Tips Keberlanjutan & Genealogi
-  { t:'sambung', sub:'Sambung Genealogi & Keberlanjutan Kelompok', ins:'Pilih lanjutan yang benar!',
-    hasil:'Kelompok yang terbentuk atas dasar genealogi seperti trah keluarga tetap perlu dijaga keberlanjutannya melalui regenerasi, komunikasi terbuka, dan rasa memiliki.',
-    steps:[
-      { prev:'Kelompok yang terbentuk berdasarkan kesamaan garis keturunan atau ikatan darah disebut dasar...', benar:'Genealogi', salah:['Geografis','Kepentingan'] },
-      { prev:'Trah keluarga dan dinasti merupakan contoh kelompok berdasarkan dasar...', benar:'Genealogi', salah:['Nasib/Pengalaman','Kepentingan'] },
-      { prev:'Agar kelompok tidak bubar, kelompok perlu menjaga rasa memiliki, yang disebut...', benar:'Sense of Belonging', salah:['Dominasi','Paternalisme'] }
-    ] }
-
+      { prev:'I like recycling ___ it protects the environment.', benar:'because', salah:['but','although'] },
+      { prev:'Plastic is harmful. ___, we should reduce it.', benar:'Therefore', salah:['However','Although'] },
+      { prev:'Many students enjoy clubs. ___, my class loves the English club.', benar:'For example', salah:['In conclusion','However'] } ] }
 ];
 
-/* --- 4) BERLATIH — 45 soal, 5 ragam --- */
-/* Tipe: 'pg' | 'bs' | 'drag_word' | 'pg_kompleks' | 'jodoh'.
-   • 'pg' & 'pg_kompleks' tampil DUA SISI: pertanyaan di kiri, opsi A–E di kanan.
-     - Jumlah opsi bebas (2–5+). Huruf A,B,C,D,E,... dibuat otomatis.
-     - 'j' pg = indeks jawaban benar (0=A,1=B,2=C,3=D,4=E).
-     - 'j' pg_kompleks = daftar indeks benar, mis. [0,2,4].
-     - Opsional: 'img' (path gambar soal) & 'stimulus' (teks/HTML wacana) untuk soal SMA/HOTS.
-   • 'bs' | 'drag_word' | 'jodoh' tampil FULL (satu kolom penuh). */
 const dtLatih = [
-  // (1) PG — Pengertian & Syarat
-  { t:'pg',
-    stimulus:'<b>Bacalah:</b> Ribuan orang menonton pertandingan sepak bola di stadion. Mereka duduk berdekatan namun tidak saling mengenal dan tidak memiliki kesadaran sebagai satu kesatuan.',
-    soal:'Berdasarkan ilustrasi tersebut, kumpulan penonton tersebut termasuk...',
-    opsi:['Kelompok sosial','Kerumunan','Kelompok primer','Kelompok sekunder','Paguyuban'], j:1,
-    msg:'Kumpulan penonton tersebut hanya kerumunan karena tidak memenuhi syarat kelompok sosial, yaitu tidak ada kesadaran bersama maupun interaksi berkelanjutan.' },
-  // (2) BS — Pengertian & Syarat
-  { t:'bs', soal:'Salah satu syarat terbentuknya kelompok sosial adalah adanya interaksi timbal balik antaranggota.', j:true, msg:'Benar, interaksi timbal balik atau komunikasi dua arah merupakan salah satu syarat utama kelompok sosial.' },
-  // (3) DRAG_WORD — Pengertian & Syarat
-  { t:'drag_word', soal:'Syarat utama kelompok sosial meliputi <span class="blank-slot" data-id="1">___</span> sebagai bagian dari kelompok dan adanya <span class="blank-slot" data-id="2">___</span> yang mengikat anggotanya seperti kesamaan tujuan.', w:['kesadaran bersama','faktor pengikat','kerumunan'], j:['kesadaran bersama','faktor pengikat'], msg:'Kesadaran bersama dan faktor pengikat merupakan dua dari empat syarat utama terbentuknya kelompok sosial.' },
-  // (4) PG_KOMPLEKS — Pengertian & Syarat
-  { t:'pg_kompleks', soal:'Pilih pernyataan yang termasuk SYARAT kelompok sosial berikut ini (boleh lebih dari satu).', opsi:['Ada kesadaran bersama sebagai anggota kelompok','Anggota tidak pernah saling berinteraksi','Ada faktor pengikat seperti kesamaan tujuan','Kelompok tidak memiliki struktur maupun norma','Ada interaksi timbal balik antaranggota'], j:[0,2,4], msg:'Kesadaran bersama, faktor pengikat, dan interaksi timbal balik merupakan syarat utama kelompok sosial, bukan sebaliknya.' },
-  // (5) JODOH — Pengertian & Syarat
-  { t:'jodoh', soal:'Jodohkan syarat kelompok sosial dengan contoh penerapannya!', pairs:[{n:1,t:'Kesadaran Bersama'},{n:2,t:'Berstruktur & Bernorma'}], imgs:[{n:1,i:'./asset/img/latih_jodoh11_1.png',name:'Anggota Sadar Menjadi Bagian Kelompok'},{n:2,i:'./asset/img/latih_jodoh11_2.png',name:'Ada Aturan dan Pola Perilaku Bersama'}] },
-  // (6) PG — Ciri & Dasar Pembentukan
-  { t:'pg', soal:'Sebuah trah keluarga besar berkumpul secara rutin karena memiliki garis keturunan yang sama. Kelompok tersebut terbentuk atas dasar...', opsi:['Kesamaan wilayah','Kesamaan kepentingan','Genealogi/keturunan','Kesamaan nasib','Formalitas organisasi'], j:2, msg:'Trah keluarga besar terbentuk atas dasar genealogi, yaitu kesamaan garis keturunan atau ikatan darah.' },
-  // (7) BS — Ciri & Dasar Pembentukan
-  { t:'bs', soal:'Ikatan mahasiswa daerah merupakan contoh kelompok yang terbentuk atas dasar kesamaan wilayah/geografis.', j:true, msg:'Benar, ikatan mahasiswa daerah terbentuk karena anggotanya berasal dari daerah asal yang sama.' },
-  // (8) DRAG_WORD — Ciri & Dasar Pembentukan
-  { t:'drag_word', soal:'Kelompok petani yang tergabung karena sama-sama pernah mengalami gagal panen terbentuk atas dasar kesamaan <span class="blank-slot" data-id="1">___</span>.', w:['nasib/pengalaman','wilayah','keturunan'], j:['nasib/pengalaman'], msg:'Kesamaan nasib atau pengalaman, seperti penderitaan atau perjuangan yang sama, menjadi dasar pembentukan kelompok tersebut.' },
-  // (9) PG_KOMPLEKS — Ciri & Dasar Pembentukan
-  { t:'pg_kompleks', soal:'Pilih pernyataan yang merupakan CIRI kelompok sosial (boleh lebih dari satu).', opsi:['Merupakan kesatuan nyata yang dapat dibedakan dari kelompok lain','Anggota tidak memiliki struktur peran','Menunjukkan ikatan sosial antaranggota','Memiliki norma dan aturan bersama','Anggotanya tidak saling terikat sama sekali'], j:[0,2,3], msg:'Kesatuan nyata, ikatan sosial, dan norma/aturan bersama merupakan ciri-ciri kelompok sosial.' },
-  // (10) JODOH — Ciri & Dasar Pembentukan
-  { t:'jodoh', soal:'Jodohkan dasar pembentukan kelompok sosial dengan contohnya!', pairs:[{n:1,t:'Kesamaan Kepentingan'},{n:2,t:'Kesamaan Nasib/Pengalaman'}], imgs:[{n:1,i:'./asset/img/latih_jodoh12_1.png',name:'Klub/Komunitas Seni'},{n:2,i:'./asset/img/latih_jodoh12_2.png',name:'Asosiasi Pekerja/Survivor'}] },
-  // (11) PG — Primer vs Sekunder
-  { t:'pg', soal:'Hubungan antaranggota dalam sebuah keluarga bersifat akrab, personal, dan tatap muka langsung. Menurut Charles H. Cooley, keluarga termasuk kelompok...', opsi:['Sekunder','Formal','Primer','Gesellschaft','Out-group'], j:2, msg:'Keluarga termasuk kelompok primer karena memiliki ikatan batin kuat, tatap muka, dan bersifat personal-intim.' },
-  // (12) BS — Primer vs Sekunder
-  { t:'bs', soal:'Kelompok sekunder bersifat personal dan sangat intim seperti hubungan dalam keluarga.', j:false, msg:'Salah, kelompok sekunder justru bersifat formal, impersonal, dan spesifik sesuai tugas/tujuan, berbeda dengan kelompok primer.' },
-  // (13) DRAG_WORD — Primer vs Sekunder
-  { t:'drag_word', soal:'Menurut Charles H. Cooley, kelompok dengan ikatan batin kuat dan tatap muka disebut kelompok <span class="blank-slot" data-id="1">___</span>, sedangkan kelompok yang bersifat formal dan impersonal disebut kelompok <span class="blank-slot" data-id="2">___</span>.', w:['Primer','Sekunder','In-Group'], j:['Primer','Sekunder'], msg:'Cooley membedakan kelompok primer (akrab, tatap muka) dan kelompok sekunder (formal, impersonal).' },
-  // (14) PG_KOMPLEKS — Primer vs Sekunder
-  { t:'pg_kompleks', soal:'Pilih contoh KELOMPOK PRIMER berikut ini (boleh lebih dari satu).', opsi:['Keluarga inti','Perusahaan tempat bekerja','Sahabat karib','Serikat pekerja','Kelompok bermain masa kecil'], j:[0,2,4], msg:'Keluarga, sahabat karib, dan kelompok bermain masa kecil merupakan contoh kelompok primer karena bersifat akrab dan personal.' },
-  // (15) JODOH — Primer vs Sekunder
-  { t:'jodoh', soal:'Jodohkan Kelompok Primer/Sekunder dengan cirinya!', pairs:[{n:1,t:'Kelompok Primer'},{n:2,t:'Kelompok Sekunder'}], imgs:[{n:1,i:'./asset/img/latih_jodoh13_1.png',name:'Tatap Muka & Akrab'},{n:2,i:'./asset/img/latih_jodoh13_2.png',name:'Formal & Impersonal'}] },
-  // (16) PG — In-group vs Out-group
-  { t:'pg', soal:'Siswa suatu sekolah selalu mendukung tim sekolahnya sendiri dan menganggap tim sekolah lain sebagai saingan. Sikap ini menggambarkan pembedaan antara...', opsi:['Primer dan sekunder','In-group dan out-group','Formal dan informal','Gemeinschaft dan Gesellschaft','Dominasi dan integrasi'], j:1, msg:'Sikap tersebut menggambarkan pembedaan in-group (kelompok sendiri) dan out-group (kelompok saingan) menurut W.G. Sumner.' },
-  // (17) BS — In-group vs Out-group
-  { t:'bs', soal:'Out-group adalah kelompok tempat individu merasa menjadi bagian dan mengidentifikasikan dirinya.', j:false, msg:'Salah, yang dimaksud adalah in-group. Out-group justru adalah kelompok luar yang dianggap asing atau saingan.' },
-  // (18) DRAG_WORD — In-group vs Out-group
-  { t:'drag_word', soal:'Menurut W.G. Sumner, kelompok tempat seseorang mengidentifikasi dirinya disebut <span class="blank-slot" data-id="1">___</span>, sedangkan kelompok luar yang dianggap saingan disebut <span class="blank-slot" data-id="2">___</span>.', w:['In-Group','Out-Group','Gesellschaft'], j:['In-Group','Out-Group'], msg:'In-group adalah kelompok kita, sedangkan out-group adalah kelompok mereka yang dianggap asing atau lawan.' },
-  // (19) PG_KOMPLEKS — In-group vs Out-group
-  { t:'pg_kompleks', soal:'Pilih pernyataan yang benar tentang in-group dan out-group (boleh lebih dari satu).', opsi:['In-group penuh rasa empati, loyalitas, dan persaudaraan','Out-group selalu lebih besar dari in-group','Out-group dianggap sebagai kelompok luar atau saingan','In-group dan out-group bersifat tetap selamanya','Sikap terhadap out-group dapat berupa persaingan'], j:[0,2,4], msg:'In-group ditandai loyalitas dan persaudaraan, sedangkan out-group dianggap asing/saingan dan dapat memunculkan sikap persaingan.' },
-  // (20) JODOH — In-group vs Out-group
-  { t:'jodoh', soal:'Jodohkan In-Group/Out-Group dengan contoh sikapnya!', pairs:[{n:1,t:'In-Group'},{n:2,t:'Out-Group'}], imgs:[{n:1,i:'./asset/img/latih_jodoh14_1.png',name:'Loyal pada Kelompok Sendiri'},{n:2,i:'./asset/img/latih_jodoh14_2.png',name:'Menganggap Kelompok Lain Saingan'}] },
-  // (21) PG — Gemeinschaft vs Gesellschaft
-  { t:'pg', soal:'Ikatan antarpedagang di pasar terbentuk karena kepentingan ekonomi dan bersifat sementara. Menurut Ferdinand Tönnies, ikatan ini termasuk...', opsi:['Gemeinschaft by blood','Gemeinschaft by place','Gemeinschaft by mind','Gesellschaft','In-group'], j:3, msg:'Ikatan pedagang termasuk Gesellschaft karena bersifat lahiriah, sementara, dan berbasis kepentingan ekonomi.' },
-  // (22) BS — Gemeinschaft vs Gesellschaft
-  { t:'bs', soal:'Gemeinschaft by mind terbentuk karena adanya kesamaan ideologi atau jiwa, bukan karena hubungan darah atau tempat tinggal.', j:true, msg:'Benar, Gemeinschaft by mind adalah ikatan berdasarkan kesamaan gagasan atau ideologi (sejiwa).' },
-  // (23) DRAG_WORD — Gemeinschaft vs Gesellschaft
-  { t:'drag_word', soal:'Ferdinand Tönnies membedakan kelompok sosial menjadi <span class="blank-slot" data-id="1">___</span> yang bersifat alami dan kekal, serta <span class="blank-slot" data-id="2">___</span> yang bersifat kontraktual dan sementara.', w:['Gemeinschaft','Gesellschaft','Out-Group'], j:['Gemeinschaft','Gesellschaft'], msg:'Gemeinschaft (paguyuban) bersifat alami dan kekal, sedangkan Gesellschaft (patembayan) bersifat kontraktual dan sementara.' },
-  // (24) PG_KOMPLEKS — Gemeinschaft vs Gesellschaft
-  { t:'pg_kompleks', soal:'Pilih contoh Gemeinschaft (paguyuban) berikut ini (boleh lebih dari satu).', opsi:['Keluarga besar (by blood)','Kontrak kerja di perusahaan','Warga satu desa (by place)','Ikatan pedagang','Komunitas seideologi (by mind)'], j:[0,2,4], msg:'Keluarga besar, warga satu desa, dan komunitas seideologi merupakan contoh Gemeinschaft berdasarkan darah, tempat, dan pikiran.' },
-  // (25) JODOH — Gemeinschaft vs Gesellschaft
-  { t:'jodoh', soal:'Jodohkan tipe Gemeinschaft dengan contohnya!', pairs:[{n:1,t:'By Blood'},{n:2,t:'By Place'}], imgs:[{n:1,i:'./asset/img/latih_jodoh15_1.png',name:'Sekerabat/Keluarga'},{n:2,i:'./asset/img/latih_jodoh15_2.png',name:'Tetangga/Warga Desa'}] },
-  // (26) PG — Formal vs Informal
-  { t:'pg', soal:'OSIS di sekolah memiliki AD/ART, struktur kepengurusan resmi, dan aturan tertulis. OSIS termasuk kelompok...', opsi:['Informal','Formal','Gemeinschaft','Out-group','Primer'], j:1, msg:'OSIS termasuk kelompok formal karena memiliki aturan tertulis tegas dan struktur hierarki resmi.' },
-  // (27) BS — Formal vs Informal
-  { t:'bs', soal:'Kelompok informal seperti geng nongkrong memiliki struktur hierarki resmi dan aturan tertulis yang ketat.', j:false, msg:'Salah, kelompok informal justru terbentuk spontan tanpa aturan tertulis yang kaku, berbeda dengan kelompok formal.' },
-  // (28) DRAG_WORD — Formal vs Informal
-  { t:'drag_word', soal:'Kelompok yang memiliki aturan tertulis tegas dan struktur hierarki resmi disebut kelompok <span class="blank-slot" data-id="1">___</span>, sedangkan kelompok yang terbentuk spontan tanpa aturan tertulis disebut kelompok <span class="blank-slot" data-id="2">___</span>.', w:['Formal','Informal','Sekunder'], j:['Formal','Informal'], msg:'Kelompok formal memiliki aturan tertulis dan struktur resmi, sedangkan kelompok informal terbentuk spontan tanpa aturan baku.' },
-  // (29) PG_KOMPLEKS — Formal vs Informal
-  { t:'pg_kompleks', soal:'Pilih contoh kelompok FORMAL berikut ini (boleh lebih dari satu).', opsi:['Sekolah','Kelompok belajar teman sekelas','Partai politik','Geng nongkrong','Instansi pemerintah'], j:[0,2,4], msg:'Sekolah, partai politik, dan instansi pemerintah merupakan contoh kelompok formal karena memiliki struktur dan aturan resmi.' },
-  // (30) JODOH — Formal vs Informal
-  { t:'jodoh', soal:'Jodohkan kelompok Formal/Informal dengan contohnya!', pairs:[{n:1,t:'Formal'},{n:2,t:'Informal'}], imgs:[{n:1,i:'./asset/img/latih_jodoh16_1.png',name:'Partai Politik'},{n:2,i:'./asset/img/latih_jodoh16_2.png',name:'Kelompok Belajar Teman Sekelas'}] },
-  // (31) PG — Dinamika & Pola Hubungan Antarkelompok
-  { t:'pg', soal:'Sebuah negara mengakui dan menghormati keberadaan berbagai kelompok etnis secara sejajar tanpa ada yang mendominasi. Pola hubungan ini disebut...', opsi:['Dominasi','Paternalisme','Akulturasi','Pluralisme','Integrasi'], j:3, msg:'Pluralisme adalah pengakuan dan penghormatan atas hak serta keberadaan tiap kelompok secara sejajar.' },
-  // (32) BS — Dinamika & Pola Hubungan Antarkelompok
-  { t:'bs', soal:'Paternalisme adalah dominasi kelompok pendatang terhadap kelompok pribumi.', j:true, msg:'Benar, paternalisme merupakan bentuk dominasi kelompok pendatang terhadap kelompok pribumi.' },
-  // (33) DRAG_WORD — Dinamika & Pola Hubungan Antarkelompok
-  { t:'drag_word', soal:'Percampuran dua kebudayaan tanpa menghilangkan kebudayaan asli disebut <span class="blank-slot" data-id="1">___</span>, sedangkan penyatuan berbagai kelompok berdasarkan kesetaraan hak sipil dan politik disebut <span class="blank-slot" data-id="2">___</span>.', w:['Akulturasi','Integrasi','Dominasi'], j:['Akulturasi','Integrasi'], msg:'Akulturasi adalah percampuran budaya tanpa hilangnya budaya asli, sedangkan integrasi adalah penyatuan kelompok atas dasar kesetaraan hak.' },
-  // (34) PG_KOMPLEKS — Dinamika & Pola Hubungan Antarkelompok
-  { t:'pg_kompleks', soal:'Pilih faktor EKSTERNAL penyebab dinamika kelompok sosial berikut ini (boleh lebih dari satu).', opsi:['Konflik antaranggota kelompok','Perubahan lingkungan sosial','Pergantian kepemimpinan kelompok','Perkembangan teknologi','Perbedaan tujuan antaranggota'], j:[1,3], msg:'Perubahan lingkungan sosial dan perkembangan teknologi merupakan faktor eksternal, sedangkan konflik, pergantian kepemimpinan, dan perbedaan tujuan bersifat internal.' },
-  // (35) JODOH — Dinamika & Pola Hubungan Antarkelompok
-  { t:'jodoh', soal:'Jodohkan pola hubungan antarkelompok dengan pengertiannya!', pairs:[{n:1,t:'Dominasi'},{n:2,t:'Integrasi'}], imgs:[{n:1,i:'./asset/img/latih_jodoh17_1.png',name:'Penguasaan Kelompok atas Kelompok Lain'},{n:2,i:'./asset/img/latih_jodoh17_2.png',name:'Penyatuan Berdasarkan Kesetaraan Hak'}] },
-  // (36) PG — Tahapan Tuckman
-  { t:'pg', soal:'Sebuah kelompok belajar baru saja terbentuk. Para anggotanya masih saling mengenal dan mencari tujuan bersama. Kelompok tersebut sedang berada pada tahap...', opsi:['Storming','Norming','Performing','Forming','Adjourning'], j:3, msg:'Tahap Forming adalah tahap ketika anggota baru berkumpul, saling mengenal, dan mencari tujuan kelompok.' },
-  // (37) BS — Tahapan Tuckman
-  { t:'bs', soal:'Tahap Storming ditandai dengan munculnya gesekan dan perbedaan pendapat antaranggota kelompok.', j:true, msg:'Benar, Storming adalah tahap timbulnya konflik, gesekan, dan resistensi terhadap aturan dalam kelompok.' },
-  // (38) DRAG_WORD — Tahapan Tuckman
-  { t:'drag_word', soal:'Bruce Tuckman mengemukakan teori tahapan kelompok pada tahun <span class="blank-slot" data-id="1">___</span>, dan tahap Adjourning ditambahkan bersama Mary Ann Jensen pada tahun <span class="blank-slot" data-id="2">___</span>.', w:['1965','1977','1990'], j:['1965','1977'], msg:'Bruce Tuckman mengemukakan teorinya pada 1965, sedangkan tahap Adjourning ditambahkan bersama Mary Ann Jensen pada 1977.' },
-  // (39) PG_KOMPLEKS — Tahapan Tuckman
-  { t:'pg_kompleks', soal:'Pilih pernyataan yang benar tentang tahapan Tuckman berikut ini (boleh lebih dari satu).', opsi:['Forming adalah tahap awal saling mengenal','Storming adalah tahap kinerja optimal','Norming adalah tahap pembentukan norma kelompok','Adjourning terjadi sebelum Forming','Performing adalah tahap kelompok berfungsi produktif'], j:[0,2,4], msg:'Forming (awal berkenalan), Norming (pembentukan norma), dan Performing (kinerja optimal) adalah pernyataan yang tepat sesuai urutan tahapan Tuckman.' },
-  // (40) JODOH — Tahapan Tuckman
-  { t:'jodoh', soal:'Jodohkan tahap Tuckman dengan deskripsinya!', pairs:[{n:1,t:'Forming'},{n:2,t:'Adjourning'}], imgs:[{n:1,i:'./asset/img/latih_jodoh18_1.png',name:'Anggota Berkumpul dan Canggung'},{n:2,i:'./asset/img/latih_jodoh18_2.png',name:'Kelompok Membubarkan Diri'}] },
-  // (41) PG — Tips Keberlanjutan & Genealogi
-  { t:'pg', soal:'Setelah tujuan lama tercapai, sebuah komunitas membuat target baru agar anggotanya tetap termotivasi. Langkah ini termasuk upaya menjaga keberlanjutan kelompok melalui...', opsi:['Regenerasi anggota','Merumuskan visi dan target baru','Menjaga sense of belonging','Inovasi teknologi semata','Dominasi kelompok lain'], j:1, msg:'Merumuskan visi dan target baru secara berkala membuat kelompok selalu memiliki motivasi dan arah perjuangan bersama.' },
-  // (42) BS — Tips Keberlanjutan & Genealogi
-  { t:'bs', soal:'Regenerasi anggota dan rotasi kepengurusan bertujuan membawa energi dan ide-ide segar ke dalam kelompok.', j:true, msg:'Benar, regenerasi anggota dan penyegaran kepemimpinan bertujuan membawa energi dan ide-ide segar agar kelompok tidak stagnan.' },
-  // (43) DRAG_WORD — Tips Keberlanjutan & Genealogi
-  { t:'drag_word', soal:'Agar kelompok tidak mengalami pembubaran, perlu dibangun komunikasi yang <span class="blank-slot" data-id="1">___</span> dan dijaga rasa <span class="blank-slot" data-id="2">___</span> di antara anggotanya.', w:['transparan','memiliki (belonging)','tertutup'], j:['transparan','memiliki (belonging)'], msg:'Komunikasi yang transparan dan rasa memiliki (sense of belonging) menjadi kunci agar kelompok tetap berkelanjutan dan tidak bubar.' },
-  // (44) PG_KOMPLEKS — Tips Keberlanjutan & Genealogi
-  { t:'pg_kompleks', soal:'Pilih upaya menjaga keberlanjutan kelompok berikut ini (boleh lebih dari satu).', opsi:['Merumuskan visi dan target baru secara berkala','Membiarkan konflik tanpa penyelesaian','Melakukan regenerasi anggota','Menutup diri dari inovasi dan teknologi','Menjaga sense of belonging anggota'], j:[0,2,4], msg:'Merumuskan visi baru, regenerasi anggota, dan menjaga sense of belonging merupakan upaya agar kelompok tetap berkelanjutan.' },
-  // (45) JODOH — Tips Keberlanjutan & Genealogi
-  { t:'jodoh', soal:'Jodohkan dasar pembentukan genealogi dengan tips menjaga kelompok!', pairs:[{n:1,t:'Genealogi'},{n:2,t:'Regenerasi Anggota'}], imgs:[{n:1,i:'./asset/img/latih_jodoh19_1.png',name:'Trah Keluarga/Dinasti'},{n:2,i:'./asset/img/latih_jodoh19_2.png',name:'Rekrutmen Anggota Baru'}] }
-
+  { t:'pg', soal:'Which expression is used to ASK for an opinion?', opsi:['I strongly believe so.','What is your opinion about this?','You are absolutely right.','I am afraid I disagree.'], j:1, msg:'"What is your opinion about this?" asks for someone\'s opinion.' },
+  { t:'pg', stimulus:'Rani: "Do you think students should wear a uniform?"', soal:'Which answer gives an opinion WITH a reason?', opsi:['Yes.','I think so, because it makes us look neat and equal.','I do not know.','Maybe tomorrow.'], j:1, msg:'A good opinion includes a reason, introduced with "because".' },
+  { t:'pg', soal:'"You have a point, but I see it differently." This expression shows...', opsi:['Full agreement','Polite partial disagreement','Asking for opinion','Changing the topic'], j:1, msg:'"You have a point, but..." accepts part of the idea and then politely disagrees.' },
+  { t:'pg', soal:'Which sentence is the STRONGEST opinion?', opsi:['I guess it is good.','It seems to me it is good.','I am convinced that it is good.','Perhaps it is good.'], j:2, msg:'"I am convinced that..." expresses a strong, certain opinion.' },
+  { t:'bs', soal:'"How do you feel about online learning?" is an expression of GIVING opinion.', j:false, msg:'It is an expression of ASKING for opinion.' },
+  { t:'bs', soal:'"In my opinion" can be followed by a reason that begins with "because".', j:true, msg:'Correct. Example: In my opinion, it is useful because it saves time.' },
+  { t:'drag_word', soal:'A: What do you <span class="blank-slot" data-id="1">___</span> about e-books? B: In my <span class="blank-slot" data-id="2">___</span>, they are practical.', w:['think','opinion','agree','tired'], j:['think','opinion'], msg:'"What do you think about...?" and "In my opinion, ..." are common opinion expressions.' },
+  { t:'drag_word', soal:'I am afraid I <span class="blank-slot" data-id="1">___</span> with you, <span class="blank-slot" data-id="2">___</span> I respect your idea.', w:['disagree','but','agree','because'], j:['disagree','but'], msg:'Polite disagreement: "I am afraid I disagree with you, but I respect your idea."' },
+  { t:'pg_kompleks', soal:'Choose ALL expressions for AGREEING (more than one).', opsi:['You are absolutely right.','I could not agree more.','I do not think so.','That is a good point.','I am afraid I disagree.'], j:[0,1,3], msg:'The expressions of agreeing are: You are absolutely right, I could not agree more, and That is a good point.' },
+  { t:'pg_kompleks', soal:'Choose ALL expressions for ASKING for opinion (more than one).', opsi:['How do you feel about this?','In my view, it is useful.','Do you think it is useful?','What is your opinion on it?','I strongly believe so.'], j:[0,2,3], msg:'Asking for opinion: How do you feel...? Do you think...? What is your opinion on...?' }
 ];
 
-/* --- 5) LAB MAYA — laboratorium virtual interaktif (2 eksperimen) --- */
 const LABMAYA = [
-  { judul:"Eksperimen Klasifikasi Kelompok Sosial",
-    intro:"Ketuk sebuah kartu contoh, lalu ketuk tabung kategori yang menurutmu benar untuk memindahkannya!",
+  { judul:"Opinion Expression Sorting Lab",
+    intro:"Ketuk sebuah kartu ungkapan, lalu ketuk tabung kategori yang menurutmu benar!",
     percobaan:[
-      { nama:"Primer vs Sekunder", ket:"Charles H. Cooley",
-        kat:[ {key:'primer',label:'Primer',desc:'Ikatan batin kuat, tatap muka, personal & intim'},
-              {key:'sekunder',label:'Sekunder',desc:'Formal, impersonal, sesuai tugas/tujuan'} ],
-        sampel:[ {t:'Keluarga',k:'primer'}, {t:'Sahabat dekat',k:'primer'}, {t:'Serikat pekerja',k:'sekunder'}, {t:'Perusahaan tempat bekerja',k:'sekunder'} ] },
-      { nama:"In-Group vs Out-Group", ket:"W.G. Sumner",
-        kat:[ {key:'in',label:'In-Group',desc:'Kelompok "kita", penuh empati & loyalitas'},
-              {key:'out',label:'Out-Group',desc:'Kelompok "mereka", dianggap asing/lawan'} ],
-        sampel:[ {t:'Tim sekolahku sendiri',k:'in'}, {t:'Klub yang kuikuti',k:'in'}, {t:'Tim sekolah lawan tanding',k:'out'}, {t:'Kelompok pesaing',k:'out'} ] },
-      { nama:"Gemeinschaft vs Gesellschaft", ket:"Ferdinand Tönnies",
-        kat:[ {key:'gemein',label:'Gemeinschaft (Paguyuban)',desc:'Ikatan batin, alami & kekal'},
-              {key:'gesell',label:'Gesellschaft (Patembayan)',desc:'Ikatan lahiriah, kontrak & sementara'} ],
-        sampel:[ {t:'Warga satu desa',k:'gemein'}, {t:'Sekerabat / keluarga besar',k:'gemein'}, {t:'Ikatan pedagang',k:'gesell'}, {t:'Kontrak kerja PT',k:'gesell'} ] },
-      { nama:"Formal vs Informal", ket:"",
-        kat:[ {key:'formal',label:'Formal',desc:'Aturan tertulis tegas & struktur resmi'},
-              {key:'informal',label:'Informal',desc:'Terbentuk spontan tanpa aturan tertulis'} ],
-        sampel:[ {t:'Sekolah',k:'formal'}, {t:'Partai politik',k:'formal'}, {t:'Geng nongkrong',k:'informal'}, {t:'Kelompok belajar teman sekelas',k:'informal'} ] }
-    ] },
-  { judul:"Simulasi Tahapan Perkembangan Kelompok (Bruce Tuckman)",
-    intro:"Ikuti kisah <b>Kelompok Piket Kelas</b> menghadapi Lomba Kebersihan Sekolah! Ketuk tiap tahap untuk melihat avatar berubah posisi & suasana, baca ceritanya, lalu susun urutan tahapannya di bagian bawah.",
-    tahap:[
-      { kode:'forming', nama:'1. Forming', label:'Pembentukan', warna:'#94A3B8',
-        desc:'Anggota baru berkumpul, saling mengenal, merasa canggung, serta mencari norma dasar dan tujuan kelompok.',
-        cerita:'🏫 <b>Kelompok Piket Baru:</b> Wali kelas membentuk kelompok piket berisi 4 siswa yang belum saling akrab. Mereka baru berkumpul dan masih canggung — sampai akhirnya sadar punya <b>tujuan yang sama</b>: menjaga kebersihan kelas demi memenangkan lomba kebersihan sekolah.' },
-      { kode:'storming', nama:'2. Storming', label:'Timbulnya Konflik', warna:'#E63946',
-        desc:'Muncul gesekan, perbedaan pendapat, perebutan peran, dan resistensi terhadap aturan.',
-        cerita:'⚡ <b>Ujian Pertama:</b> Mereka berselisih paham soal pembagian tugas — ada yang merasa kebagian kerja lebih banyak, ada yang malas mengerjakan bagiannya. Wajar kok, ini tanda kelompok sedang diuji oleh perbedaan pendapat.' },
-      { kode:'norming', nama:'3. Norming', label:'Pembentukan Norma', warna:'#F4A261',
-        desc:'Konflik berhasil diredakan, kesepakatan dan norma kelompok terbentuk, serta muncul rasa kebersamaan (cohesiveness).',
-        cerita:'🤝 <b>Bermusyawarah:</b> Alih-alih bubar, mereka duduk bersama dan bermusyawarah. Jadwal piket disepakati adil, dan aturan main dibuat bersama-sama.' },
-      { kode:'performing', nama:'4. Performing', label:'Kinerja Optimal', warna:'#2ECC71',
-        desc:'Kelompok berfungsi secara efisien, produktif, dan fokus pada pencapaian tujuan bersama.',
-        cerita:'🧹 <b>Bekerja Efektif:</b> Meski sempat lelah dan tergoda menyerah menjelang hari penilaian, mereka saling menguatkan. Kini kelompok bekerja rapi dan efisien — kelas bersih, tugas selesai tepat waktu, hingga akhirnya <b>terpilih sebagai kelas terbersih</b>!' },
-      { kode:'adjourning', nama:'5. Adjourning', label:'Pembubaran', warna:'#457B9D',
-        desc:'Tugas telah selesai, tujuan tercapai, dan kelompok membubarkan diri atau berpisah.',
-        cerita:'📖 <b>Tugas Selesai:</b> Setelah lomba usai dan tujuan tercapai, kelompok piket khusus lomba ini menyelesaikan tugasnya. Konflik yang tadinya nyaris memecah mereka justru membuat mereka makin kompak — pengalaman kerja sama itu tetap membekas pada setiap anggota.' }
+      { nama:"Asking vs Giving", ket:"",
+        kat:[ {key:'ask',label:'Asking Opinion',desc:'Meminta pendapat orang lain'}, {key:'give',label:'Giving Opinion',desc:'Menyatakan pendapat sendiri'} ],
+        sampel:[ {t:'What do you think about it?',k:'ask'}, {t:'How do you feel about this?',k:'ask'}, {t:'In my opinion, it is useful.',k:'give'}, {t:'I believe it is a good idea.',k:'give'} ] },
+      { nama:"Agree vs Disagree", ket:"",
+        kat:[ {key:'agree',label:'Agreeing',desc:'Menyatakan setuju'}, {key:'dis',label:'Disagreeing',desc:'Menyatakan tidak setuju'} ],
+        sampel:[ {t:'I could not agree more.',k:'agree'}, {t:'You are absolutely right.',k:'agree'}, {t:'I am afraid I disagree.',k:'dis'}, {t:'I do not think so.',k:'dis'} ] },
+      { nama:"Strong vs Tentative", ket:"",
+        kat:[ {key:'strong',label:'Strong',desc:'Sangat yakin'}, {key:'soft',label:'Tentative',desc:'Kurang yakin'} ],
+        sampel:[ {t:'I am convinced that it works.',k:'strong'}, {t:'Without a doubt, it helps.',k:'strong'}, {t:'I guess it might help.',k:'soft'}, {t:'Perhaps it is better.',k:'soft'} ] }
     ] }
 ];
-LABMAYA.push({
-  judul:"Penjelasan Tahapan Perkembangan Kelompok (Bruce Tuckman)",
-  intro:"Ketuk tiap kartu tahapan di bawah ini untuk membuka penjelasan lengkap beserta ceritanya. Rangkuman ini melengkapi simulasi yang sudah kamu jalankan di Lab 2.",
-  tahap: LABMAYA[1].tahap
-});
 
 /* ---- Placeholder gambar otomatis bila aset belum tersedia ---- */
 function imgErr(el){
@@ -1135,7 +759,7 @@ function simpanIdentitas(){
 }
 
 /* ---- CAPAIAN GABUNGAN (Bermain + Berlatih) & SERTIFIKAT ---- */
-const SKOR_MAKS_GABUNGAN = 225;
+const SKOR_MAKS_GABUNGAN = 210;
 let capaian = { bermain:false, berlatih:false, skorBermain:0, skorLatih:0 };
 function totalSkorGabungan(){ return capaian.skorBermain + capaian.skorLatih; }
 function cekCapaianGabungan(){
@@ -1252,7 +876,7 @@ function unduhPiagam(jenis, hasilTeks){
   ctx.fillStyle='#555'; ctx.font='600 24px Georgia, serif';
   ctx.fillText('Asal Sekolah: '+infoMurid.sekolah, w/2, 495);
   ctx.fillStyle='#1A1A1A'; ctx.font='400 25px Georgia, serif';
-  const yAkhir = wrapCanvasText(ctx, `Atas keberhasilan menyelesaikan aktivitas ${jenis} pada mata pelajaran Sosiologi materi "Kelompok Sosial" dengan hasil ${hasilTeks}.`, w/2, 570, 1050, 36);
+  const yAkhir = wrapCanvasText(ctx, `Atas keberhasilan menyelesaikan aktivitas ${jenis} pada mata pelajaran Bahasa Inggris materi "Asking and Giving Opinion" dengan hasil ${hasilTeks}.`, w/2, 570, 1050, 36);
   ctx.fillStyle='#555'; ctx.font='500 20px Georgia, serif';
   const tgl=new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
   ctx.fillText('Diberikan pada '+tgl, w/2, yAkhir+70);
@@ -1317,16 +941,7 @@ function startVideo(){ showScreen('scr-video'); renderDaftarVideoRujukan(); }
 function keluarVideo(){ goMenu(); }
 /* Kartu rujukan tautan YouTube — tautan biasa (bukan iframe) agar tetap tampil
    walau perangkat tidak tersambung internet atau iframe diblokir jaringan sekolah. */
-const DATA_VIDEO=[
-  { id:'8z0AjqtXlqg', judul:'Dinamika Kelompok Sosial (Kelas XII)',
-    desk:'Membahas dinamika dan perkembangan kelompok sosial di masyarakat sebagai bekal persiapan UTBK Sosiologi.' },
-  { id:'zvvfBcImF_Y', judul:'Latar Belakang Terbentuknya Kelompok Sosial',
-    desk:'Mengulas berbagai faktor dan latar belakang yang mendorong manusia membentuk kelompok sosial.' },
-  { id:'hAHiTk03Ats', judul:'Kelompok Sosial: Pengertian, Jenis, dan Ciri',
-    desk:'Ringkasan pengertian, jenis-jenis, serta ciri-ciri kelompok sosial yang perlu kamu pahami.' },
-  { id:'PKxdPhhKJwg', judul:'Kelompok Sosial Menurut Robert K. Merton',
-    desk:'Mengenal klasifikasi kelompok sosial (membership & reference group) menurut pandangan Robert K. Merton.' }
-];
+const DATA_VIDEO=[];
 function renderDaftarVideoRujukan(){
   const grid=document.getElementById('video-grid');
   grid.innerHTML=DATA_VIDEO.map(v=>`
